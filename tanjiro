@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main(){
+    int n, sum = 0;
+    do{
+        printf("Enter n: ");
+        scanf("%i",&n);
+    }while(n<10||n>100);
+    for(int i = 1; i<=n; i++)
+      sum=sum+i;
+    printf("%i\n", sum);
+}
