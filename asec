@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main(){
+    float epsilon, n, f=1;
+
+
+    do{
+      printf("Enter epsilon: ");
+      scanf("%f", &epsilon);
+    }while(epsilon<0||epsilon>1);
+
+    
+    for(n = 0; 1/n>=epsilon; n++){
+      n*=f;
+      if(1/n<epsilon)
+        break;
+    }
+    
+    printf("%f", n);
+}
