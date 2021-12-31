@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <math.h>
+
+int main(){
+    
+    float epsilon, n;
+
+
+    do{
+      printf("Enter epsilon: ");
+      scanf("%f", &epsilon);
+    }while(epsilon<0||epsilon>1);
+
+    for(n = 0; 1/(2*n+1)>=epsilon; n++);
+
+    printf("%f", n);
+}
