@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main(){
+    float a, smallest, biggest, average, timeAisEnter, sum;
+
+    do{
+      printf("enter a: ");
+      scanf("%f",&a);
+      smallest=a;
+      if(a==0) break;
+      timeAisEnter++;
+      sum=sum+a;
+      if(smallest>a)
+        smallest=a;
+      if(biggest<a)
+        biggest=a;
+    }while(a!=0);
+    printf("biggest=%f\n", biggest);
+    printf("smallest = %f", smallest);
+    average=sum/timeAisEnter;
+    printf("average=%f\n", average);
+}
