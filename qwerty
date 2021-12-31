@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <math.h>
+
+int main(){
+    int n[]={3,-10,9,-2,5,-1,2,6,3,0};
+    int a=-1, counter=1, sum=0, negativeSum=0, niso=0, x;
+    for(;counter<=10;counter++){
+      a++;
+      printf("%i", n[a]);
+      if(n[a==0])
+        niso++;
+
+      else if(n[a]>0)
+        sum+=n[a];
+      
+      else if(n[a]<0)
+        negativeSum+=n[a];
+    }
+    printf("\n%i", niso);
+    printf("\n%i", sum);
+    printf("\n%i", negativeSum);
+
+    printf("\nenter x: ");
+    scanf("%i", &x);
+    a=-1;
+    counter=0;
+    do{
+      counter++;
+      a++;
+    }while(x!=n[a]);
+    printf("The x's place number is: %i\n ", counter);
+}
