@@ -16,14 +16,17 @@ int main()
     {
         if (c == s[i])
         {
-            printf("it exists.");
             found = 1;
-            break;
         }
     }
 
     if (found == 0)
     {
         printf("not exist.");
+    }
+    
+    if (found == 1)
+    {
+        printf("it exists.");
     }
 }
