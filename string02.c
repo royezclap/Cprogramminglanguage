@@ -5,7 +5,7 @@ int main()
 {
     char s[10];
     char c;
-    int s_size;
+    int s_size, found = 0;
 
     printf("Enter string: ");
     gets(s);
@@ -17,12 +17,13 @@ int main()
         if (c == s[i])
         {
             printf("it exists.");
+            found = 1;
             break;
         }
-        else
-        {
-            printf("not exist.");
-            break;
-        }
+    }
+
+    if (found == 0)
+    {
+        printf("not exist.");
     }
 }
