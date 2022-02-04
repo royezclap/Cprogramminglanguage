@@ -39,6 +39,13 @@ int main()
         scanf("%d\n", &A[i]);
     }
 
+    for(int i = 0; i < n; i++)
+    {
+        printf("%d ", &A[i]);
+    }
+
+    printf("\n");
+
     int c = bigsec(A, n);
     printf(" 2nd highest number is %d", c);
 }
