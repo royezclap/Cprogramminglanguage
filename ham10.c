@@ -21,9 +21,11 @@ int perfect(int n)
         {
             printf("%d, ", i);
             tong += i;
-            printf("%d", tong);
+            
         }
     }
+
+    printf("%d", tong);
 }
 
 int main()
