@@ -4,26 +4,28 @@ int capChungThanThiet(int M, int N)
 {
     int flag = 0, flag2 = 0;
     int sum = 0;
-    for (int i = 1; i <= M; ++i)
+    for (int i = 1; i < M; ++i)
     {
         if (M % i == 0)
         {
             sum+=i;
-            if(sum == N)
-                flag = 1;
         }
+
+        if(sum == N)
+            flag = 1;
     }
 
     sum = 0;
     
-    for (int i = 1; i <= N; ++i)
+    for (int i = 1; i < N; ++i)
     {
         if (N % i == 0)
         {
             sum+=i;
-            if(sum == M)
-                flag2 = 1;
         }  
+
+        if(sum == M)
+            flag2 = 1;
 
     }
 
