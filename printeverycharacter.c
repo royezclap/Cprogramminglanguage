@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <string.h>
+
+char Checkkytu(char word1[], char word2[])
+{
+    char word3[50];
+    int flag = 0;
+    int i = 0;
+    int size_word1 = strlen(word1);
+    for (i = 0; i < size_word1; i++)
+    {
+        if (strchr(word2, word1[i]))
+        {
+            word3[flag++] = word1[i];
+        }
+    }
+    for (i = 0; i < flag; i++)
+    {
+        printf("%c ", word3[i]);
+    }
+}
+
+char kytu(char word1[], char word2[])
+{
+    if (strlen(word1) < strlen(word2))
+        Checkkytu(word1, word2);
+    else
+        Checkkytu(word2, word1);
+}
+
+int main()
+{
+    char word1[] = "ezezee";
+    char word2[] = "ezeeez";
+
+    kytu(word1, word2);
+}
