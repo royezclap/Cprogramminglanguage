@@ -1,51 +1,66 @@
 #include <stdio.h>
+#include <string.h>
 
 typedef struct Hoso
 {
     char HoTen[40];
     float Diem;
-}Hoso;
+    char Loai[100];
+} Hoso;
 
 int main()
 {
     Hoso sv1;
+    int n;
 
-    printf("Nhap ten sinh vien: ");
-    gets(sv1.HoTen);
-
-    printf("%s", sv1.HoTen);
-
-    printf("\n");
-
-    do
-    {
-    printf("Nhap diem sinh vien: ");
-    scanf("%f", &sv1.Diem);
-    }while (sv1.Diem > 10 || sv1.Diem < 0);
-
-    printf("%f", sv1.Diem);
+    printf("Nhap so luong sinh vien: ");
+    scanf("%d", &n);
 
     printf("\n");
 
-    if(sv1.Diem < 5)
+    for (int i = 0; i < n; i++)
     {
-        printf("Hoc Sinh khong dat");
+        for (int i = 0; i < n; i++)
+        {
+            printf("Enter student name: ");
+            gets(sv1.HoTen);
+        }
+
+        printf("Nhap diem sinh vien: ");
+        scanf("%f", &sv1.Diem);
+
+        if (sv1.Diem < 0)
+        {
+            printf("A dissapointment");
+        }
+
+        if (sv1.Diem > 10)
+        {
+            printf("Cheat");
+        }
+
+        if (sv1.Diem < 5)
+        {
+            strcpy(sv1.Loai, "hoc sinh khong dat\n");
+            printf("%s", sv1.Loai);
+        }
+
+        if (sv1.Diem >= 5 && sv1.Diem < 7)
+        {
+            strcpy(sv1.Loai, "hoc sinh trung binh\n");
+            printf("%s", sv1.Loai);
+        }
+
+        if (sv1.Diem >= 7 && sv1.Diem < 9)
+        {
+            strcpy(sv1.Loai, "hoc sinh kha\n");
+            printf("%s", sv1.Loai);
+        }
+
+        if (sv1.Diem >= 9 && sv1.Diem <= 10)
+        {
+            strcpy(sv1.Loai, "hoc sinh gioi\n");
+            printf("%s", sv1.Loai);
+        }
     }
-
-    if(sv1.Diem >= 5 && sv1.Diem < 7)
-    {
-        printf("Hoc Sinh trung binh");
-    }
-
-    if(sv1.Diem >=7 && sv1.Diem < 9)
-    {
-        printf("Hoc Sinh kha");
-    }
-
-    if(sv1.Diem >=9 && sv1.Diem <= 10)
-    {
-        printf("Hoc Sinh gioi");
-    }
-
-
 }
