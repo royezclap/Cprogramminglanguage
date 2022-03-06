@@ -5,6 +5,7 @@ int main()
     int A[10], B[10], C[10];
     int n;
     int *p;
+    int j = 0, z = 0;
 
     do
     {
@@ -15,26 +16,32 @@ int main()
     printf("Enter Array: ");
     for (int i = 0; i < n; i++)
     {
-        scanf("%d   ", &A[i]);
+        scanf("%d", &A[i]);
     }
 
     p = A;
 
     for (int i = 0; i < n; i++)
     {
-        if(A[i] > 0)
+        if (A[i] > 0)
         {
-            B[i] = A[i];
-            printf("Positive: %d ", *(p+i));
+            B[j] = *(A + i);
+            j++;
         }
         else
         {
-            printf("\n");
-            C[i] = A[i];
-            printf("Negative: %d ", *(p+i));
+            C[z] = *(A + i);
+            z++;
         }
-        
-        
     }
-    
+
+    for(int i = 0; i < j; i++)
+    {
+        printf("%d ", *(B + i));
+    }
+    printf("\n");
+    for(int i = 0; i < z; i++)
+    {
+        printf("%d ", *(C + i));
+    }
 }
