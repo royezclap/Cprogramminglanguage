@@ -14,19 +14,19 @@ int main()
     printf("Enter array: ");
     for(int i = 0; i < n; i++)
     {
-        scanf("%d ", &a[i]);
+        scanf("%d", &a[i]);
     }
 
     for(int i = 0; i < n; i++)
     {
-        printf("%d ", a[i]);
+        printf("%d ", *(a + i));
     }
 
     printf("\n");
     
     for(int i = 0; i < n; i++)
     {
-        printf("%d ", &a[i]);
+        printf("%p ", a + i);
     }
     
 }
